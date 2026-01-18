@@ -406,3 +406,24 @@ For support, questions, or feedback, please contact:
 **Last Updated**: December 11, 2025  
 **Version**: 2.0.0  
 **Status**: Production Ready
+# Food Donation and Surplus Management System
+
+## Overview
+This project aims to reduce food wastage and support hunger reduction by connecting food donors with NGOs and volunteers through a centralized platform.
+
+## Features
+- Food donor registration
+- NGO and volunteer coordination
+- Food listing and request management
+- Basic tracking of food distribution
+
+## Sustainability Alignment
+- SDG 2: Zero Hunger
+- SDG 12: Responsible Consumption and Production
+
+## AI & Future Scope
+AI concepts learned during the IBM AI + Sustainability internship (such as IBM Granite models, Retrieval Augmented Generation, and entity extraction) can be integrated in future versions to enhance insights and decision-making.
+
+## Tech Stack
+- Developed using VS Code
+- Version control with GitHub
