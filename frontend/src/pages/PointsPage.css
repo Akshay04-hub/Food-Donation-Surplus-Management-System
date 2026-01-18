@@ -1,0 +1,450 @@
+.points-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 40px 20px;
+}
+
+.points-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.points-page h1 {
+  color: white;
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.tab-btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.tab-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+.tab-btn.active {
+  background: white;
+  color: #667eea;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.error-message {
+  background: #FF6B6B;
+  color: white;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.loading {
+  text-align: center;
+  color: white;
+  font-size: 18px;
+  padding: 40px;
+}
+
+.tab-content {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.tab-content h2 {
+  color: #333;
+  margin-bottom: 25px;
+  font-size: 24px;
+  border-bottom: 3px solid #667eea;
+  padding-bottom: 15px;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 40px 20px;
+  color: #999;
+}
+
+.empty-state p {
+  font-size: 16px;
+  margin: 0;
+}
+
+/* Transaction History */
+.transaction-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.transaction-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  border-left: 4px solid #667eea;
+  transition: all 0.3s ease;
+}
+
+.transaction-item:hover {
+  background: #f0f0f0;
+  transform: translateX(5px);
+}
+
+.transaction-icon {
+  font-size: 28px;
+  min-width: 40px;
+  text-align: center;
+}
+
+.transaction-info {
+  flex: 1;
+}
+
+.transaction-type {
+  font-weight: 600;
+  color: #333;
+  font-size: 14px;
+  text-transform: capitalize;
+}
+
+.transaction-description {
+  color: #666;
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+.transaction-date {
+  color: #999;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.transaction-points {
+  font-size: 18px;
+  font-weight: 700;
+  min-width: 80px;
+  text-align: right;
+  font-family: 'Monaco', 'Courier New', monospace;
+}
+
+.transaction-points .positive {
+  color: #10B981;
+}
+
+.transaction-points .negative {
+  color: #EF4444;
+}
+
+/* Leaderboard */
+.leaderboard-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.leaderboard-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.leaderboard-item:hover {
+  background: #f0f0f0;
+  transform: translateX(5px);
+}
+
+.rank {
+  min-width: 50px;
+  font-size: 24px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.medal {
+  display: inline-block;
+}
+
+.user-info {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #667eea;
+}
+
+.user-details {
+  flex: 1;
+}
+
+.user-name {
+  font-weight: 600;
+  color: #333;
+  font-size: 14px;
+}
+
+.user-stats {
+  color: #999;
+  font-size: 12px;
+}
+
+.leaderboard-points {
+  font-size: 18px;
+  font-weight: 700;
+  color: #667eea;
+  min-width: 100px;
+  text-align: right;
+}
+
+/* Points Info */
+.info-section {
+  margin-bottom: 40px;
+}
+
+.info-section h3 {
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 18px;
+  border-bottom: 2px solid #E5E7EB;
+  padding-bottom: 10px;
+}
+
+.rules-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.rule-card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.rule-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+}
+
+.rule-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.rule-points {
+  background: rgba(255, 255, 255, 0.25);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.rule-action {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.rule-description {
+  margin: 0;
+  font-size: 13px;
+  opacity: 0.9;
+}
+
+.tiers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+}
+
+.tier-card {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  border: 2px solid #E5E7EB;
+  transition: all 0.3s ease;
+}
+
+.tier-card:hover {
+  border-color: #667eea;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
+}
+
+.tier-emoji {
+  font-size: 40px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.tier-title {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.tier-requirement {
+  color: #999;
+  font-size: 12px;
+}
+
+.rewards-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.reward-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  border-left: 4px solid #667eea;
+}
+
+.reward-points {
+  background: #667eea;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-weight: 700;
+  min-width: 60px;
+  text-align: center;
+}
+
+.reward-name {
+  font-weight: 600;
+  color: #333;
+}
+
+.reward-description {
+  color: #999;
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+.info-footer {
+  text-align: center;
+  margin-top: 30px;
+  padding: 20px;
+  background: #f0f4ff;
+  border-radius: 8px;
+  color: #666;
+}
+
+.info-footer p {
+  margin: 0;
+  font-size: 14px;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 25px;
+  padding-top: 25px;
+  border-top: 2px solid #E5E7EB;
+}
+
+.pagination button {
+  padding: 10px 20px;
+  border: 2px solid #667eea;
+  background: white;
+  color: #667eea;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.pagination button:hover:not(:disabled) {
+  background: #667eea;
+  color: white;
+}
+
+.pagination button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pagination span {
+  color: #666;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .points-page {
+    padding: 20px 10px;
+  }
+
+  .points-page h1 {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+
+  .tab-content {
+    padding: 20px 15px;
+  }
+
+  .rules-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tiers-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .transaction-item,
+  .leaderboard-item,
+  .reward-item {
+    flex-wrap: wrap;
+  }
+
+  .transaction-points,
+  .leaderboard-points {
+    width: 100%;
+    text-align: right;
+    margin-top: 10px;
+  }
+}

@@ -1,0 +1,233 @@
+.points-card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 12px;
+  padding: 20px;
+  color: white;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.points-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+}
+
+.points-card.loading,
+.points-card.error {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100px;
+}
+
+.points-card.error {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.points-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 10px;
+}
+
+.points-header h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.details-toggle {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 12px;
+  transition: all 0.3s ease;
+}
+
+.details-toggle:hover {
+  background: rgba(255, 255, 255, 0.4);
+  transform: scale(1.1);
+}
+
+.points-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.points-display {
+  flex: 1;
+}
+
+.large-points {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 5px;
+}
+
+.points-label {
+  font-size: 14px;
+  opacity: 0.9;
+  font-weight: 500;
+}
+
+.tier-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 12px 16px;
+  border-radius: 8px;
+  backdrop-filter: blur(10px);
+}
+
+.tier-emoji {
+  font-size: 32px;
+}
+
+.tier-name {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.points-details {
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  padding: 15px;
+  margin-top: 15px;
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 14px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.detail-row:last-of-type {
+  border-bottom: none;
+  margin-bottom: 15px;
+}
+
+.detail-row .label {
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+.detail-row .value {
+  font-weight: 700;
+  font-family: 'Monaco', 'Courier New', monospace;
+}
+
+.points-info {
+  margin-top: 15px;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+}
+
+.points-info h4 {
+  margin: 0 0 10px 0;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  opacity: 0.9;
+}
+
+.points-info ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.points-info li {
+  font-size: 13px;
+  margin-bottom: 6px;
+  padding-left: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.points-info li:last-child {
+  margin-bottom: 0;
+}
+
+.view-history-btn {
+  width: 100%;
+  padding: 10px 15px;
+  margin-top: 12px;
+  background: rgba(255, 255, 255, 0.25);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  color: white;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+}
+
+.view-history-btn:hover {
+  background: rgba(255, 255, 255, 0.35);
+  border-color: rgba(255, 255, 255, 0.7);
+  transform: translateX(2px);
+}
+
+@media (max-width: 768px) {
+  .points-card {
+    padding: 15px;
+  }
+
+  .large-points {
+    font-size: 36px;
+  }
+
+  .points-main {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .tier-badge {
+    width: 100%;
+    flex-direction: row;
+    margin-top: 10px;
+  }
+
+  .tier-emoji {
+    font-size: 24px;
+  }
+}
